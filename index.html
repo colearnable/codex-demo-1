@@ -4,88 +4,104 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tolan Thornton | YouTube Content Creator and Software Engineer</title>
-    <meta
-      name="description"
-      content="Portfolio of Tolan Thornton, YouTube Content Creator and Software Engineer."
-    />
+    <meta name="description" content="Portfolio of Tolan Thornton, YouTube Content Creator and Software Engineer." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Press+Start+2P&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="scanlines" aria-hidden="true"></div>
-    <header class="topbar">
-      <div class="brand">TT.EXE</div>
+    <header class="topbar clickable">
+      <div class="logo">TOLAN // PLAYER ONE</div>
       <nav>
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+        <a class="clickable" href="#about">About</a>
+        <a class="clickable" href="#experience">Experience</a>
+        <a class="clickable" href="#skills">Skills</a>
+        <a class="clickable" href="#contact">Contact</a>
       </nav>
     </header>
 
     <main>
-      <section class="hero panel">
-        <div class="hero-copy">
-          <p class="kicker">PRESS START</p>
+      <section class="hero section-glass">
+        <div class="hero-text">
+          <p class="eyebrow">NOW LOADING: CREATOR MODE</p>
           <h1>Tolan Thornton</h1>
-          <p class="title">YouTube Content Creator and Software Engineer</p>
-          <p>
-            Software engineer with deep product instincts, accessibility focus, and a builder’s
-            mindset across startups and enterprise platforms.
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#contact">Book Time</a>
-            <a class="btn" href="https://www.linkedin.com/in/tolanthornton" target="_blank" rel="noreferrer">LinkedIn</a>
+          <p class="subtitle">YouTube Content Creator and Software Engineer</p>
+          <p class="summary">Building future-friendly products with style, speed, and soul. Equal parts code, communication, and creative energy.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary clickable" href="#contact">Let’s Build</a>
+            <a class="btn btn-ghost clickable" href="https://www.linkedin.com/in/tolanthornton" target="_blank" rel="noreferrer">LinkedIn</a>
           </div>
         </div>
-        <div class="avatar-frame" aria-label="Pixel avatar placeholder">8-BIT<br/>CREATOR</div>
+        <figure class="portrait-card clickable">
+          <img src="avatar.png" alt="Pixel portrait of Tolan Thornton" />
+        </figure>
       </section>
 
-      <section id="about" class="panel">
-        <h2>About</h2>
-        <p>
-          Autodidact, philomath, and thoughtful technologist who enjoys translating between human
-          problems and code solutions. Specializing in JavaScript/TypeScript ecosystems, frontend
-          architecture, and modern AI tooling.
-        </p>
+      <section id="about" class="section-grid">
+        <article class="section-glass">
+          <h2>About</h2>
+          <p>Autodidact. Philomath. Empathy-first engineer. I turn complex systems into simple experiences that people vibe with.</p>
+        </article>
+        <article class="section-glass stats">
+          <h2>Quick Stats</h2>
+          <div><span>Base</span><strong>San Francisco, CA</strong></div>
+          <div><span>Strength</span><strong>Infrastructure + AI</strong></div>
+          <div><span>Languages</span><strong>EN / FR / 中文</strong></div>
+        </article>
       </section>
 
-      <section id="experience" class="panel">
+      <section id="experience" class="section-glass">
         <h2>Experience Highlights</h2>
-        <ul class="timeline">
-          <li><strong>Stealth (2024–Present):</strong> Title-Agnostic AI Engineer focused on evaluating frontier LLM behavior.</li>
-          <li><strong>Kroger (2022–2023):</strong> Senior Software Engineer delivering Next.js/TypeScript greenfield analytics platform.</li>
-          <li><strong>Sidecar Health (2022):</strong> Software Engineer II driving React modernization and UX improvements.</li>
-          <li><strong>Spearmint (2021–2022):</strong> Built accessibility-focused Electron app and testing workflows.</li>
-          <li><strong>coderemotely (2019–2021):</strong> Full-stack engineering across Ruby on Rails, React, and PostgreSQL.</li>
-        </ul>
-      </section>
-
-      <section id="skills" class="panel">
-        <h2>High-Score Skills</h2>
-        <div class="chips">
-          <span>JavaScript (ES6+)</span><span>TypeScript</span><span>React</span><span>Next.js</span>
-          <span>Node.js</span><span>Python</span><span>Ruby on Rails</span><span>AWS</span>
-          <span>GraphQL</span><span>WCAG 2.1</span><span>Jest</span><span>Playwright</span>
+        <p class="hint">Hover (or tap) each card to see more detail.</p>
+        <div class="timeline">
+          <article class="clickable" tabindex="0">
+            <h3>Stealth (2024–Present)</h3>
+            <p class="role">Title-Agnostic AI Engineer</p>
+            <p class="detail">Focused on evaluating frontier LLM behavior.</p>
+          </article>
+          <article class="clickable" tabindex="0">
+            <h3>Kroger (2022–2023)</h3>
+            <p class="role">Senior Software Engineer</p>
+            <p class="detail">Delivering Next.js/TypeScript greenfield analytics platform.</p>
+          </article>
+          <article class="clickable" tabindex="0">
+            <h3>Sidecar Health (2022)</h3>
+            <p class="role">Software Engineer II</p>
+            <p class="detail">Driving React modernization and UX improvements.</p>
+          </article>
+          <article class="clickable" tabindex="0">
+            <h3>Spearmint (2021–2022)</h3>
+            <p class="role">Software Engineer</p>
+            <p class="detail">Built accessibility-focused Electron app and testing workflows.</p>
+          </article>
+          <article class="clickable" tabindex="0">
+            <h3>coderemotely (2019–2021)</h3>
+            <p class="role">Software Engineer</p>
+            <p class="detail">Full-stack engineering across Ruby on Rails, React, and PostgreSQL.</p>
+          </article>
         </div>
       </section>
 
-      <section id="contact" class="panel">
+      <section id="skills" class="section-glass">
+        <h2>High-Score Skills</h2>
+        <div class="chips">
+          <span class="clickable">JavaScript</span><span class="clickable">TypeScript</span><span class="clickable">React</span><span class="clickable">Next.js</span><span class="clickable">Node.js</span>
+          <span class="clickable">Python</span><span class="clickable">Ruby on Rails</span><span class="clickable">GraphQL</span><span class="clickable">WCAG 2.1</span><span class="clickable">Playwright</span>
+        </div>
+      </section>
+
+      <section id="contact" class="section-glass contact">
         <h2>Contact</h2>
-        <p>San Francisco, California, United States</p>
-        <p>
-          Let’s build thoughtful software, publish meaningful content, and make tech more human.
-        </p>
-        <a class="btn btn-primary" href="https://www.linkedin.com/in/tolanthornton" target="_blank" rel="noreferrer">Connect on LinkedIn</a>
+        <p>Got a wild idea, sharp product challenge, or creator collab? I’m in.</p>
+        <div class="cta-row center">
+          <a class="btn btn-primary clickable" href="https://www.linkedin.com/in/tolanthornton" target="_blank" rel="noreferrer">Connect on LinkedIn</a>
+        </div>
       </section>
     </main>
 
-    <footer>© <span id="year"></span> Tolan Thornton • Built with neon grit and modern craft.</footer>
+    <footer>© <span id="year"></span> Tolan Thornton • Neon clean. Arcade mean.</footer>
     <script src="script.js"></script>
   </body>
 </html>
