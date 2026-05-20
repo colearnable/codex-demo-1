@@ -1,0 +1,65 @@
+:root {
+  --orange: #f6511d;
+  --yellow: #ffb400;
+  --cyan: #00a6ed;
+  --green: #7fb800;
+  --navy: #0d2c54;
+  --bg: #040d1a;
+  --text: #f4f8ff;
+  --muted: #afc6e3;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--text);background:radial-gradient(80% 55% at 50% -5%,rgba(0,166,237,.22),transparent 70%),radial-gradient(60% 60% at 12% 0%,rgba(246,81,29,.17),transparent 66%),linear-gradient(180deg,#08162b 0%,var(--bg) 100%);line-height:1.6}
+.scanlines{position:fixed;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(255,255,255,.02) 0 1px,transparent 1px 4px)}
+.topbar{width:min(1180px,92vw);margin:1rem auto 0;padding:1rem 1.25rem;display:flex;justify-content:space-between;align-items:center;border:1px solid rgba(0,166,237,.35);border-radius:999px;background:rgba(7,18,34,.66);backdrop-filter:blur(10px)}
+.logo{font-family:"Space Grotesk",sans-serif;letter-spacing:.07em;color:var(--yellow);font-weight:700}
+nav{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+nav a{text-decoration:none;color:var(--text);font-weight:500}
+main{width:min(1180px,92vw);margin:2rem auto 4rem;display:grid;gap:1.3rem}
+.section-glass{background:linear-gradient(160deg,rgba(13,44,84,.56),rgba(13,44,84,.2));border:1px solid rgba(0,166,237,.36);border-radius:24px;padding:clamp(1.2rem,2.3vw,2rem);box-shadow:0 16px 40px rgba(0,0,0,.34),inset 0 0 0 1px rgba(255,255,255,.05)}
+.hero{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:clamp(1rem,4vw,3rem);min-height:min(82vh,760px)}
+.eyebrow{font-family:"Space Grotesk",sans-serif;letter-spacing:.08em;color:var(--green);font-weight:700;font-size:.8rem}
+h1{font-size:clamp(2.3rem,6vw,4.4rem);line-height:1.05;margin:.2rem 0 .5rem}
+.subtitle{color:var(--cyan);font-weight:600;font-size:clamp(1.02rem,2.3vw,1.35rem);margin:0 0 .8rem}
+.summary{max-width:50ch;color:var(--muted)}
+.cta-row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.85rem;margin-top:1.2rem}
+.cta-row.center{justify-content:center}
+.btn{display:flex;justify-content:center;align-items:center;min-height:46px;min-width:150px;padding:.72rem 1rem;border-radius:12px;text-decoration:none;font-weight:700}
+.btn-primary{background:linear-gradient(135deg,var(--orange),var(--yellow));color:#121212}
+.btn-ghost{border:1px solid rgba(0,166,237,.5);color:var(--text);background:rgba(0,0,0,.18)}
+.portrait-card{margin:0;aspect-ratio:4/5;border-radius:20px;overflow:hidden;border:1px solid rgba(127,184,0,.4);background:rgba(0,0,0,.2);display:flex;justify-content:center;align-items:center}
+.portrait-card img{max-width:100%;max-height:100%;object-fit:contain;image-rendering:pixelated;filter:drop-shadow(0 0 22px rgba(255,180,0,.2))}
+.section-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.3rem}
+h2{font-family:"Space Grotesk",sans-serif;letter-spacing:.06em;color:var(--yellow);margin:0 0 .8rem}
+.stats div{display:flex;justify-content:space-between;padding:.5rem 0;border-bottom:1px dashed rgba(0,166,237,.25)}
+.stats div:last-child{border-bottom:0}
+.stats span{color:var(--muted)}
+.timeline{display:grid;gap:.8rem}
+.timeline article{padding:.8rem .95rem;border-radius:14px;background:rgba(0,0,0,.18);border:1px solid rgba(0,166,237,.26)}
+.timeline h3{margin:0 0 .2rem;font-size:1rem}
+.timeline p{margin:0;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:.55rem}
+.chips span{padding:.45rem .7rem;border-radius:999px;border:1px solid rgba(127,184,0,.6);background:rgba(127,184,0,.14);font-size:.92rem}
+.contact{text-align:center}
+footer{text-align:center;color:#92adcc;padding:0 1rem 2rem}
+
+.clickable{transition:transform .2s ease,box-shadow .2s ease,filter .2s ease}
+@media (hover:hover){
+  .clickable:hover{transform:translateY(-3px) scale(1.015);filter:brightness(1.05)}
+  .btn.clickable:hover{box-shadow:0 10px 24px rgba(0,166,237,.22)}
+}
+
+@media (max-width: 920px){
+  .hero,.section-grid{grid-template-columns:1fr}
+  .hero{min-height:auto}
+  .portrait-card{max-width:360px;width:100%;justify-self:center}
+  .hero-text{text-align:center}
+}
+@media (max-width: 640px){
+  .topbar{border-radius:20px;padding:.9rem 1rem;flex-direction:column;gap:.7rem}
+  nav{gap:.7rem}
+  main{margin-top:1rem;gap:1rem}
+  .section-glass{border-radius:18px}
+  .btn{width:100%}
+}
