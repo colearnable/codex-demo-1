@@ -141,3 +141,7 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+# Prompt source — never ship the unencrypted prompt
+build-prompt.md
+prompt-source.html

@@ -12,10 +12,11 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
     <div class="scanlines" aria-hidden="true"></div>
     <header class="topbar clickable">
       <div class="logo">TOLAN // PLAYER ONE</div>
-      <nav>
+      <nav aria-label="Primary">
         <a class="clickable" href="#about">About</a>
         <a class="clickable" href="#experience">Experience</a>
         <a class="clickable" href="#skills">Skills</a>
@@ -23,7 +24,7 @@
       </nav>
     </header>
 
-    <main>
+    <main id="main">
       <section class="hero section-glass">
         <div class="hero-text">
           <p class="eyebrow">NOW LOADING: CREATOR MODE</p>
@@ -32,11 +33,11 @@
           <p class="summary">Building future-friendly products with style, speed, and soul. Equal parts code, communication, and creative energy.</p>
           <div class="cta-row">
             <a class="btn btn-primary clickable" href="#contact">Let’s Build</a>
-            <a class="btn btn-ghost clickable" href="https://www.linkedin.com/in/tolanthornton" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="btn btn-ghost clickable" href="https://www.linkedin.com/in/tolanthornton" target="_blank" rel="noopener noreferrer">LinkedIn<span class="sr-only"> (opens in new tab)</span></a>
           </div>
         </div>
         <figure class="portrait-card clickable">
-          <img src="avatar.png" alt="Pixel portrait of Tolan Thornton" />
+          <img id="avatar" src="assets/avatar.png" alt="Pixel portrait of Tolan Thornton" />
         </figure>
       </section>
 
@@ -57,27 +58,27 @@
         <h2>Experience Highlights</h2>
         <p class="hint">Hover (or tap) each card to see more detail.</p>
         <div class="timeline">
-          <article class="clickable" tabindex="0">
+          <article class="clickable" tabindex="0" role="button" aria-expanded="false">
             <h3>Stealth (2024–Present)</h3>
             <p class="role">Title-Agnostic AI Engineer</p>
             <p class="detail">Focused on evaluating frontier LLM behavior.</p>
           </article>
-          <article class="clickable" tabindex="0">
+          <article class="clickable" tabindex="0" role="button" aria-expanded="false">
             <h3>Kroger (2022–2023)</h3>
             <p class="role">Senior Software Engineer</p>
             <p class="detail">Delivering Next.js/TypeScript greenfield analytics platform.</p>
           </article>
-          <article class="clickable" tabindex="0">
+          <article class="clickable" tabindex="0" role="button" aria-expanded="false">
             <h3>Sidecar Health (2022)</h3>
             <p class="role">Software Engineer II</p>
             <p class="detail">Driving React modernization and UX improvements.</p>
           </article>
-          <article class="clickable" tabindex="0">
+          <article class="clickable" tabindex="0" role="button" aria-expanded="false">
             <h3>Spearmint (2021–2022)</h3>
             <p class="role">Software Engineer</p>
             <p class="detail">Built accessibility-focused Electron app and testing workflows.</p>
           </article>
-          <article class="clickable" tabindex="0">
+          <article class="clickable" tabindex="0" role="button" aria-expanded="false">
             <h3>coderemotely (2019–2021)</h3>
             <p class="role">Software Engineer</p>
             <p class="detail">Full-stack engineering across Ruby on Rails, React, and PostgreSQL.</p>
@@ -87,22 +88,41 @@
 
       <section id="skills" class="section-glass">
         <h2>High-Score Skills</h2>
-        <div class="chips">
-          <span class="clickable">JavaScript</span><span class="clickable">TypeScript</span><span class="clickable">React</span><span class="clickable">Next.js</span><span class="clickable">Node.js</span>
-          <span class="clickable">Python</span><span class="clickable">Ruby on Rails</span><span class="clickable">GraphQL</span><span class="clickable">WCAG 2.1</span><span class="clickable">Playwright</span>
-        </div>
+        <ul class="chips" aria-label="Skills">
+          <li>JavaScript</li><li>TypeScript</li><li>React</li><li>Next.js</li><li>Node.js</li>
+          <li>Python</li><li>Ruby on Rails</li><li>GraphQL</li><li>WCAG 2.1</li><li>Playwright</li>
+        </ul>
       </section>
 
       <section id="contact" class="section-glass contact">
         <h2>Contact</h2>
         <p>Got a wild idea, sharp product challenge, or creator collab? I’m in.</p>
         <div class="cta-row center">
-          <a class="btn btn-primary clickable" href="https://www.linkedin.com/in/tolanthornton" target="_blank" rel="noreferrer">Connect on LinkedIn</a>
+          <a class="btn btn-primary clickable" href="https://www.linkedin.com/in/tolanthornton" target="_blank" rel="noopener noreferrer">Connect on LinkedIn<span class="sr-only"> (opens in new tab)</span></a>
         </div>
       </section>
     </main>
 
-    <footer>© <span id="year"></span> Tolan Thornton • Neon clean. Arcade mean.</footer>
+    <footer>
+      <div class="footer-line">© <span id="year"></span> Tolan Thornton • Neon clean. Arcade mean.</div>
+      <div class="coin-slot-wrap">
+        <a id="coin-slot" class="coin-slot" aria-disabled="true" role="button" tabindex="0" aria-describedby="coin-slot-hint">
+          <span class="coin-icon" aria-hidden="true">◉</span>
+          <span class="coin-label">INSERT&nbsp;COIN</span>
+        </a>
+        <span id="coin-slot-hint" class="sr-only">Locked easter egg. Activation instructions provided externally.</span>
+      </div>
+    </footer>
+
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden>
+      <button id="toast-action" type="button" class="toast-action">
+        <span class="toast-text"><span aria-hidden="true">▶ </span>ACCESS GRANTED</span>
+        <span class="sr-only"> — activate to scroll to the unlocked coin slot</span>
+        <span class="toast-cue" aria-hidden="true">TAP TO LOCATE ↓</span>
+      </button>
+      <button type="button" class="toast-close" aria-label="Dismiss">×</button>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
